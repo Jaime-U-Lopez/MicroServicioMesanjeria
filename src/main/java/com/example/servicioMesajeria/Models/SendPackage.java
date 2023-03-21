@@ -5,7 +5,7 @@ public class SendPackage {
 
     private char numeroGuia;
     private Customer customer;
-    private Package packages;
+    private Packages packages;
     private int valorEnvio;
     private long celularPersonaRecibe;
     private String nombrePersonaRecibe;
@@ -13,7 +13,7 @@ public class SendPackage {
     private State_Send_Package estadoEnvio;
     private Adress_Send adress_send;
 
-    public SendPackage(char numeroGuia, Customer customer, Package packages, int valorEnvio, long celularPersonaRecibe, String nombrePersonaRecibe, String horaEntrega, State_Send_Package estadoEnvio, Adress_Send adress_send) {
+    public SendPackage(char numeroGuia, Customer customer, Packages packages, int valorEnvio, long celularPersonaRecibe, String nombrePersonaRecibe, String horaEntrega, State_Send_Package estadoEnvio, Adress_Send adress_send) {
         this.numeroGuia = numeroGuia;
         this.customer = customer;
         this.packages = packages;

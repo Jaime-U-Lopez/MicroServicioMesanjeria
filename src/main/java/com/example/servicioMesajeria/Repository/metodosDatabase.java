@@ -10,13 +10,13 @@ public interface metodosDatabase {
 
     public boolean createElement(Object element);
 
-    public boolean deleteElement(int id);
+    public boolean deleteElement(String id);
 
     public List<Object> getElementAll();
 
-    public Object getElement(int id);
+    public Object getElement(String id);
 
-    public boolean UpdateCustomer(Object elemento);
+    public boolean UpdateElement(Object elemento);
 
 
 

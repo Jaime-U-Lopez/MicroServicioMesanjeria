@@ -6,11 +6,11 @@ import com.example.servicioMesajeria.Services.ServicerCustomer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("ApiMensajeria/v1/")
+@RequestMapping("api-mensajeria/v1/")
 public class ControllerCustomer {
-
-
 
     private ServicerCustomer servicerCustomer;
 
@@ -20,36 +20,33 @@ public class ControllerCustomer {
 
     }
 
-
-
-
-
-    @PostMapping("createCustomer")
-    public void createCustomer(@RequestBody Customer customer) {
-        System.out.println("customer = " + customer);
+    @PostMapping("customer")
+    public boolean createCustomer(@RequestBody Customer customer) {
+        return this.servicerCustomer.createCustomer(customer);
     }
 
-    @GetMapping("getCustomer/{id}")
-    public void getCustomer(@PathVariable String id) {
-        System.out.println("id = " + id);
+    @GetMapping("customer/{id}")
+    public Customer getCustomer(@PathVariable String id) {
+       return this.servicerCustomer.getCustomer(id);
     }
 
 
-    @GetMapping("getCustomers")
-    public void getCustomers() {
-        System.out.println("getCustomers = ");
+    @GetMapping("customers-all")
+    public List<Customer> getCustomersAll() {
+        return this.servicerCustomer.getCustomerAll();
     }
 
 
-    @DeleteMapping("deleteCustomer/{id}")
-    public void deleteCustomer(@PathVariable String id) {
-        System.out.println(id);
+    @DeleteMapping("customer/{id}")
+    public boolean deleteCustomer(@PathVariable String id) {
+        return this.servicerCustomer.deleteCustomer(id);
 
     }
 
-    @PutMapping("updateCustomer/{id}")
-    public void updateCustomer(@RequestBody String body , @PathVariable String id ){
-        System.out.println(" update  " );
+    @PutMapping("customer/{id}")
+    public boolean updateCustomer(@RequestBody Customer customer , @PathVariable String id ){
+
+        return this.servicerCustomer.updateCustomer(customer, id);
 }
 
 }

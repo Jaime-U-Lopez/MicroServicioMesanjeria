@@ -4,7 +4,7 @@ package com.example.servicioMesajeria.Models;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Package {
+public class Packages {
 
     private int id;
     private  static int contadorPaquetes;
@@ -12,7 +12,7 @@ public class Package {
     private int pesoPaquete;
     private int valorPaquete;
 
-    public Package(int id, Type_Package typePackage, int pesoPaquete, int valorPaquete) {
+    public Packages(int id, Type_Package typePackage, int pesoPaquete, int valorPaquete) {
         this.id = id;
         this.typePackage = typePackage;
         this.pesoPaquete = pesoPaquete;

@@ -1,18 +1,16 @@
 package com.example.servicioMesajeria.Repository;
 
-import com.example.servicioMesajeria.Models.Employee;
+import com.example.servicioMesajeria.Models.Packages;
 
 import java.util.List;
 
-public class EmpleoyeDatabase implements metodosDatabase{
+public class PackageDatabase implements metodosDatabase {
 
-    private Employee employer;
+    private Packages packages;
 
-
-    public EmpleoyeDatabase(Employee employer){
-        this.employer=employer;
+    public PackageDatabase(Packages packages) {
+        this.packages = packages;
     }
-
 
     @Override
     public boolean createElement(Object element) {
@@ -38,4 +36,6 @@ public class EmpleoyeDatabase implements metodosDatabase{
     public boolean UpdateElement(Object elemento) {
         return false;
     }
+
+
 }

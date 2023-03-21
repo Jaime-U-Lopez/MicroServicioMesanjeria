@@ -2,18 +2,11 @@ package com.example.servicioMesajeria.Repository;
 
 import com.example.servicioMesajeria.Models.Customer;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CustomerDatabase implements metodosDatabase {
 
-
-    private Customer customer;
-    private List<Customer> listcustomers;
-
-    public CustomerDatabase(Customer customer) {
-        this.customer = customer;
+    public CustomerDatabase() {
     }
 
     @Override
@@ -22,23 +15,22 @@ public class CustomerDatabase implements metodosDatabase {
     }
 
     @Override
-    public boolean deleteElement(int id) {
+    public boolean deleteElement(String id) {
         return false;
     }
 
     @Override
     public List<Object> getElementAll() {
-
         return null;
     }
 
     @Override
-    public Customer getElement(int id) {
+    public Object getElement(String id) {
         return null;
     }
 
     @Override
-    public boolean UpdateCustomer(Object elemento) {
+    public boolean UpdateElement(Object elemento) {
         return false;
     }
 }

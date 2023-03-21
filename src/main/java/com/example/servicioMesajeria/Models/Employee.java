@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 @Component
-public class Employer extends Person {
+public class Employee extends Person {
 
 
     private int id;
@@ -18,7 +18,7 @@ public class Employer extends Person {
     private String ciudad;
 
 
-    public Employer(long cedula, String name, String lastName, int id, Date antiguedad, char tipoSangreRH, Type_empleoyer typeEmpleoyer, long celular, String correoElectronico, String direccionResidencia, String ciudad) {
+    public Employee(long cedula, String name, String lastName, int id, Date antiguedad, char tipoSangreRH, Type_empleoyer typeEmpleoyer, long celular, String correoElectronico, String direccionResidencia, String ciudad) {
         super(cedula, name, lastName);
         this.id = id;
         this.antiguedad = antiguedad;

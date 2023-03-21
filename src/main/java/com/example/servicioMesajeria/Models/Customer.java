@@ -5,15 +5,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class Customer extends Person {
 
-private int id;
+    private int id;
     private long celular;
     private String correoElectronico;
     private String direccionResidencia;
     private String ciudad;
 
-    public Customer(int id,  long cedula, String name, String lastName, long celular, String correoElectronico, String direccionResidencia, String ciudad) {
+    public Customer(int id, int cedula, String name, String lastName, long celular, String correoElectronico, String direccionResidencia, String ciudad) {
         super(cedula, name, lastName);
-        this.id =id;
+        this.id = id;
         this.celular = celular;
         this.correoElectronico = correoElectronico;
         this.direccionResidencia = direccionResidencia;
